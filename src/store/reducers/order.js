@@ -1,5 +1,5 @@
 import * as actionTypes from '../actions/actionTypes';
-import {updateObjects} from '../utility'
+import {updateObjects} from '../../shared/utility'
  
 
 const initialState= {
@@ -12,7 +12,7 @@ const purchaseInit = (state,action) => {
     return updateObjects(state, {purchased:false})
 }  
 const purchaseBurgerStart = (state,action) => {
-    return updateObjects(state, {loading:false })
+    return updateObjects(state, {loading:true })
 }
 const purchaseBurgerSuccess = (state,action) => {
     const newOrder = updateObjects( action.orderData, {id:action.orderId} )
@@ -25,6 +25,9 @@ const purchaseBurgerSuccess = (state,action) => {
 const purchaseBurgerFailed = (state,action) => {
     return updateObjects(state, {loading:false})
 }
+
+
+        //fetching orders from sever
 const fetchOrdersStart = (state,action) => {
     return updateObjects(state,{loading:true})
 }
@@ -39,6 +42,7 @@ const fetchOrdersFailed= (state,action) => {
 }
 
 
+        //CONTROLLER REDUCER///
 const reducer = (state=initialState,action) => {
     switch(action.type){
         case actionTypes.PURCHASE_INIT: return purchaseInit(state,action)
