@@ -14,7 +14,7 @@ import axios from '../../axios-orders'
 import Aux from '../../hoc/Auxiliiary/Auxiliary';
 
 
-class BurgerBuilder extends Component {
+export class BurgerBuilder extends Component {
     // constructor(props) {
     //     super(props);
     //     this.state = {...}

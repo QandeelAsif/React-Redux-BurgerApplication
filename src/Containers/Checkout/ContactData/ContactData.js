@@ -183,7 +183,7 @@ class ContactData extends Component {
             </div>
         );
     }
-}
+};
 
 const mapStateToProps = state => {
     return{
@@ -193,7 +193,7 @@ const mapStateToProps = state => {
         token:state.auth.token,
         userId:state.auth.userId
     }
-}
+};
 
 const mapDispatchToProps = dispatch => {
     return{

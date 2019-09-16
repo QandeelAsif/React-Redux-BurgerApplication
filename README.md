@@ -4,6 +4,11 @@
 	=============================================
 Environmental variables are defined in Config file to 'development',
 using this  NODE_ENV to enable Redux tools after deplyment in index.js file
+
+TESTING packages installed are:
+	ENZYME
+	REACT-TEST-RENDERER
+	ENZYME-ADAPTER-REACT-16
 	===========================================
 
 
